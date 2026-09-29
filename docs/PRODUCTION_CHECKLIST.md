@@ -1,0 +1,23 @@
+# Production checklist
+
+- [ ] Separate staging and production Supabase projects exist.
+- [ ] Auth email confirmation and production SMTP are configured.
+- [ ] Admin MFA is enabled where appropriate.
+- [ ] `SUPABASE_SERVICE_ROLE_KEY` is present only in server environment variables.
+- [ ] `npm run typecheck`, `npm test`, and `npm run build` pass.
+- [ ] Admin login works; student cannot enter admin routes.
+- [ ] Student data isolation is tested with two test accounts.
+- [ ] RLS policies are tested in authenticated student/admin sessions.
+- [ ] Draft/ready/published/closed test workflow is tested.
+- [ ] MCQ and theory question paths are tested.
+- [ ] Assignments, due dates, and status transitions are tested.
+- [ ] Camera, microphone, screen sharing, HTTPS, and recording initialization are tested on target browsers.
+- [ ] Chunk upload failure and recovery are tested.
+- [ ] Private bucket and signed URL access are tested.
+- [ ] Server timer, answer locking, timeout, and automatic submission are tested.
+- [ ] Activity events are written and associated with the right attempt.
+- [ ] Theory review and result visibility are tested.
+- [ ] Retention policy is approved and cleanup is not enabled prematurely.
+- [ ] Database backup and recovery procedure has been rehearsed.
+- [ ] Custom domain is HTTPS and Supabase callback URLs are exact.
+- [ ] No secrets, passwords, recordings, or student data are in Git.
